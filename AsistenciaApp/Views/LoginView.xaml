@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AsistenciaApp.Views.LoginView"
+             Shell.NavBarIsVisible="False" BackgroundColor="White">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+        <Frame BackgroundColor="White" BorderColor="Black" HeightRequest="650" WidthRequest="350" HasShadow="True">
+            <Grid RowDefinitions=".3*,.7*">
+                <Image Aspect="AspectFill" Source="faing.png"/>
+                <Grid BackgroundColor="#17569B"  Opacity="0.7">
+                    <Grid ColumnDefinitions="*,*">
+                        <Image Aspect="AspectFit"
+                               HeightRequest="120"
+                               Opacity="1"
+                               Source="upt.png"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <RoundRectangle Margin="-5,-30,-5,-2"
+                                    CornerRadius="30,30,0,0"
+                                    Fill="White"/>
+                    <VerticalStackLayout Margin="30,0,30,0">
+                        <Label FontAttributes="Bold"
+                               FontFamily="nblack"
+                               FontSize="Medium"
+                               Text="BIENVENIDO"
+                               TextColor="Black"/>
+                        <Label FontFamily="SemiBold"
+                               Text="Ingrese su Código y Contraseña"
+                               TextColor="#2D2D2D"/>
+                        <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                            <RoundRectangle  
+                                BackgroundColor="#EDEBF6"  
+                                CornerRadius="10"  
+                                HeightRequest="60"  
+                                HorizontalOptions="Center"  
+                                VerticalOptions="Center"  
+                                WidthRequest="60" />
+                            <Image HorizontalOptions="Center">
+                                <Image.Source>
+                                    <FontImageSource  
+                                        FontFamily="AwesomeSolid"  
+                                        Glyph="&#xf0e0;"  
+                                        Size="44"  
+                                        Color="#17569B" />
+                                </Image.Source>
+                            </Image>
+                            <Entry  
+                                x:Name="EntryCodigo" 
+                                Grid.Column="1"  
+                                Placeholder="Código"  
+                                VerticalOptions="Center" 
+                                TextColor="Black"
+                                BackgroundColor="#EDEBF6"/>
+                        </Grid>
+                        <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                            <RoundRectangle  
+                                BackgroundColor="#EDEBF6"  
+                                CornerRadius="10"  
+                                HeightRequest="60"  
+                                HorizontalOptions="Center"  
+                                VerticalOptions="Center"  
+                                WidthRequest="60" />
+                            <Image HorizontalOptions="Center">
+                                <Image.Source>
+                                    <FontImageSource  
+                                        FontFamily="AwesomeSolid"  
+                                        Glyph="&#xf084;"  
+                                        Size="44"  
+                                        Color="#17569B" />
+                                </Image.Source>
+                            </Image>
+                            <Entry  
+                                x:Name="EntryPassword"
+                                Grid.Column="1"  
+                                Placeholder="Contraseña"
+                                IsPassword="True"
+                                VerticalOptions="Center" 
+                                TextColor="Black"
+                                BackgroundColor="#EDEBF6"/>
+                        </Grid>
+                        <Button  
+                            Margin="0,20,0,0"  
+                            BackgroundColor="#17569B"  
+                            HeightRequest="60"  
+                            Text="Iniciar Sesión"  
+                            TextColor="#FBF6FD"
+                            Clicked="OnLoginClicked"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
