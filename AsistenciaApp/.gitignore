@@ -1,0 +1,3 @@
+# Ignorar directorios específicos
+/bin
+/obj
