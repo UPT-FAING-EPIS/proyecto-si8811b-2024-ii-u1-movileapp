@@ -45,17 +45,20 @@
                                     <FontImageSource  
                                         FontFamily="AwesomeSolid"  
                                         Glyph="&#xf0e0;"  
-                                        Size="44"  
+                                        Size="43"  
                                         Color="#17569B" />
                                 </Image.Source>
                             </Image>
                             <Entry  
-                                x:Name="EntryCodigo" 
-                                Grid.Column="1"  
-                                Placeholder="Código"  
-                                VerticalOptions="Center" 
-                                TextColor="Black"
-                                BackgroundColor="#EDEBF6"/>
+                                   x:Name="EntryCodigo" 
+                                    Grid.Column="1"  
+                                    Placeholder="Código"  
+                                    VerticalOptions="Center" 
+                                    TextColor="Black"
+                                    BackgroundColor="#EDEBF6"
+                                    Focused="OnEntryFocused"
+                                    Unfocused="OnEntryUnfocused"
+                                    Margin="10,0,0,0" />
                         </Grid>
                         <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
                             <RoundRectangle  
@@ -75,21 +78,26 @@
                                 </Image.Source>
                             </Image>
                             <Entry  
-                                x:Name="EntryPassword"
-                                Grid.Column="1"  
-                                Placeholder="Contraseña"
-                                IsPassword="True"
-                                VerticalOptions="Center" 
-                                TextColor="Black"
-                                BackgroundColor="#EDEBF6"/>
+                               x:Name="EntryPassword"
+                               Grid.Column="1"  
+                               Placeholder="Contraseña"
+                               IsPassword="True"
+                               VerticalOptions="Center" 
+                               TextColor="Black"
+                               BackgroundColor="#EDEBF6"
+                               Focused="OnEntryFocused"
+                               Unfocused="OnEntryUnfocused"
+                               Margin="10,0,0,0" />
                         </Grid>
                         <Button  
-                            Margin="0,20,0,0"  
-                            BackgroundColor="#17569B"  
-                            HeightRequest="60"  
-                            Text="Iniciar Sesión"  
-                            TextColor="#FBF6FD"
-                            Clicked="OnLoginClicked"/>
+                             x:Name="AnimatedButton"
+                             Text="Iniciar Sesión"  
+                             BackgroundColor="#17569B"  
+                             TextColor="#FBF6FD"
+                             HeightRequest="60"
+                             Clicked="OnLoginClicked"
+                             Pressed="OnButtonPressed"
+                             Released="OnButtonReleased"/>
                     </VerticalStackLayout>
                 </Grid>
             </Grid>
